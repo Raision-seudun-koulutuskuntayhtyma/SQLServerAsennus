@@ -43,7 +43,7 @@ namespace DataBaseTest
             {
                 conn2.Open();
 
-                // Create a sql command to update Calles city in Tyontekija table UPDATE
+                // Create a sql command to update Calle's city in Tyontekija table UPDATE
                 string updateEmployee = "UPDATE dbo.Tyontekija SET Postitoimipaikka = 'Turku' WHERE TyontekijaID = 1008;";
                 SqlCommand cmd2 = new SqlCommand(updateEmployee, conn2);
                 cmd2.ExecuteNonQuery();
@@ -84,7 +84,7 @@ namespace DataBaseTest
 
                 conn4.Open();
 
-                // Create SQL query to retrieve all rows from Tyontekija table READ
+                // Create SQL query to delete duplicates from Tyontekija table DELETE
                 string deleteEmployee = "DELETE FROM dbo.Tyontekija WHERE TyontekijaID IN (1011, 1012);";
                 SqlCommand cmd4 = new SqlCommand(deleteEmployee, conn4);
                 cmd4.ExecuteNonQuery();
